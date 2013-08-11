@@ -9,9 +9,10 @@ urlpatterns = patterns('',
     # url(r'^$', 'mayankbhola.views.home', name='home'),
     # url(r'^mayankbhola/', include('mayankbhola.foo.urls')),
 
-    # Uncomment the admin/doc line below to enable admin documentation:
-    # url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
-    url(r'^admin/', include(admin.site.urls)),
-    url(r'', 'blogengine.views.getRecentPosts'),
-
+    #url(r'^blog/archive/(?P<year>[\d]+)/(?P<month>[\d]+)/$', 'blogengine.views.date_archive', name="blog-date-archive"), 
+    #url(r'^blog/archive/(?P<slug>[-\w]+)/$', 'blogengine.views.category_archive', name="blog-category-archive"),
+    url(r'^blog/(?P<selected_page>\d+)/?$', 'blogengine.views.getPostsList'),
+    url(r'^blog/(?P<postSlug>[-a-zA-Z0-9]+)/?$', 'blogengine.views.getPost'),
+    url(r'^blog/$', 'blogengine.views.getPostsList'),
+	url(r'^admin/', include(admin.site.urls)),
 )
