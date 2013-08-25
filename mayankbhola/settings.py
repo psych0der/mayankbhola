@@ -9,6 +9,8 @@ ADMINS = (
     # ('Your Name', 'your_email@example.com'),
 )
 
+
+
 MANAGERS = ADMINS
 
 DATABASES = {
@@ -100,6 +102,7 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
+    'django.contrib.flatpages.middleware.FlatpageFallbackMiddleware',
     # Uncomment the next line for simple clickjacking protection:
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
@@ -127,8 +130,11 @@ INSTALLED_APPS = (
     'blogengine',
     'django.contrib.admin',
     'django.contrib.admindocs',
+    'django.contrib.flatpages',
+    'django.contrib.syndication',
 )
 
+APPEND_SLASH = True
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to
 # the site admins on every HTTP 500 error when DEBUG=False.
