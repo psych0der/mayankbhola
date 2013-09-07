@@ -29,12 +29,19 @@ urlpatterns = patterns('',
         PostMonthArchiveView.as_view(),
         name="archive_month"),
 
-    url(r'^blog/catagory/(?P<catagorySlug>[-\w]+)/(?P<selected_page>\d+)/?$', 'blogengine.views.getCategory'),
-    url(r'^blog/catagory/(?P<catagorySlug>[-\w]+)/$', 'blogengine.views.getCategory'),
-    url(r'^blog/(?P<selected_page>\d+)/?$', 'blogengine.views.getPostsList'),
+    url(r'^blog/category/(?P<categorySlug>[-\w]+)/(?P<selected_page>\d+)/?$', 'blogengine.views.getCategory'),
+    url(r'^blog/category/(?P<categorySlug>[-\w]+)/$', 'blogengine.views.getCategory'),
+
+    url(r'^blog/tag/(?P<tagSlug>[-\w]+)/(?P<selected_page>\d+)/?$', 'blogengine.views.getTag'),
+    url(r'^blog/tag/(?P<tagSlug>[-\w]+)/$', 'blogengine.views.getTag'),
+    
     url(r'^blog/\d{4}/\d{1,2}/(?P<postSlug>[-a-zA-Z0-9]+)/?$', 'blogengine.views.getPost'),
+    url(r'^blog/(?P<selected_page>\d+)/?$', 'blogengine.views.getPostsList'),
     url(r'^blog/$', 'blogengine.views.getPostsList'),
     url(r'^feeds/posts/$', PostsFeed()),
 	url(r'^admin/', include(admin.site.urls)),
     url(r'', include('django.contrib.flatpages.urls')),
+    url(r'^ckeditor/', include('ckeditor.urls')),
 )
+
+handler404 = 'blogengine.views.handler404'

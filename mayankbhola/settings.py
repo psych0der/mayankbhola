@@ -52,6 +52,9 @@ USE_L10N = True
 # If you set this to False, Django will not use timezone-aware datetimes.
 USE_TZ = True
 
+PROJECT_DIR = os.path.dirname(os.path.abspath(__file__))
+
+
 # Absolute filesystem path to the directory that will hold user-uploaded files.
 # Example: "/var/www/example.com/media/"
 MEDIA_ROOT = ''
@@ -65,14 +68,18 @@ MEDIA_URL = ''
 # Don't put anything in this directory yourself; store your static files
 # in apps' "static/" subdirectories and in STATICFILES_DIRS.
 # Example: "/var/www/example.com/static/"
-STATIC_ROOT = ''
+STATIC_ROOT = os.path.join(PROJECT_DIR, '../static_resources')
 
 # URL prefix for static files.
 # Example: "http://example.com/static/", "http://static.example.com/"
+
+CKEDITOR_UPLOAD_PATH = PROJECT_DIR +'/media/uploads'
+
 STATIC_URL = '/static/'
 
 # Additional locations of static files
 STATICFILES_DIRS = (
+    os.path.join(PROJECT_DIR, '../project_static'),
     # Put strings here, like "/home/html/static" or "C:/www/django/static".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
@@ -116,7 +123,7 @@ TEMPLATE_DIRS = (
     # Put strings here, like "/home/html/django_templates" or "C:/www/django/templates".
     # Always use forward slashes, even on Windows.
     # Don't forget to use absolute paths, not relative paths.
-    os.path.join(os.path.dirname(__file__), 'templates').replace('\\','/'),
+    os.path.join(PROJECT_DIR, '../templates').replace('\\','/'),
 
 )
 
@@ -132,7 +139,15 @@ INSTALLED_APPS = (
     'django.contrib.admindocs',
     'django.contrib.flatpages',
     'django.contrib.syndication',
+    'ckeditor',
 )
+
+
+
+
+
+
+
 
 APPEND_SLASH = True
 # A sample logging configuration. The only tangible logging

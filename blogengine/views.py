@@ -1,4 +1,4 @@
-from django.shortcuts import render_to_response
+from django.shortcuts import render_to_response ,render
 from django.core.paginator import Paginator, EmptyPage
 from blogengine.models import Post, Category
 from django.contrib.syndication.views import Feed
@@ -41,7 +41,11 @@ def getCategory(request, categorySlug, selected_page=1):
     pages = Paginator(category_posts, 5)
 
     # Get the category
-    category = Category.objects.filter(slug=categorySlug)[0]
+    try :
+        category = Category.objects.filter(slug=categorySlug)[0]
+    
+    except IndexError:
+        category = categorySlug.replace('-', ' ')
 
     # Get the specified page
     try:
@@ -51,6 +55,35 @@ def getCategory(request, categorySlug, selected_page=1):
 
     # Display all the posts
     return render_to_response('category.html', { 'posts': returned_page.object_list, 'page': returned_page, 'category': category})
+
+
+
+def getTag(request, tagSlug, selected_page=1):
+    # Get specified category
+    posts = Post.objects.all().order_by('-pub_date')
+    tag_posts = []
+    for post in posts:
+        if post.tags.filter(slug=tagSlug):
+            tag_posts.append(post)
+
+    # Add pagination
+    pages = Paginator(tag_posts, 5)
+
+    # Get the category
+    try :
+        tag = Tag.objects.filter(slug=tagSlug)[0]
+    
+    except IndexError:
+        tag = tagSlug.replace('-', ' ')
+
+    # Get the specified page
+    try:
+        returned_page = pages.page(selected_page)
+    except EmptyPage:
+        returned_page = pages.page(pages.num_pages)
+
+    # Display all the posts
+    return render_to_response('category.html', { 'posts': returned_page.object_list, 'page': returned_page, 'category': tag})
 
 class PostsFeed(Feed):
     title = "Psych0der's Blog posts"
@@ -80,5 +113,9 @@ class PostMonthArchiveView(MonthArchiveView):
     make_object_list = True
     allow_future = True
     template_name = "month_archive.html"
+
+
+def handler404(request):
+    return render(request,'404.html')
 
 
