@@ -4,6 +4,24 @@ body {
   /* The html and body elements cannot have any padding or margin. */
 }
 
+@font-face
+{
+font-family: geo;
+src: url(../fonts/GeosansLight.ttf);
+}
+
+@font-face
+{
+font-family: euro;
+src: url(../fonts/eurof35.ttf);
+}
+
+@font-face
+{
+    font-family: quick;
+    src : url(../fonts/QuicksandBook.otf);
+}
+
 
 
 /* Wrapper for page content to push down footer */
@@ -14,13 +32,75 @@ body {
   /* Negative indent footer by it's height */
   margin: 0 auto -60px;
 }
+.head
+{
+    margin-bottom:10px;
+    margin-top:5px;
+    padding-bottom: 5px;
+
+
+}
+
+.borderd
+{
+    border-bottom: thin solid #bbbbbb;
+    margin-bottom: 10px;
+}
+
+.title-heading
+{
+    font-family: euro;
+    font-size: 4em;
+
+}
+
+
+.navbar 
+{
+    list-style-type:none;
+    margin:0;
+    padding:0;
+    display: inline;
+    margin-top: 40px;
+}
+
+.navbar , .navbar a
+{
+    font-family: geo;
+    color: black;
+    font-size:1.2em;
+}
+
+
+.navbar li
+{   display: inline;
+    margin-right: 35px;
+
+    
+}
+.navbar a:hover {
+    color:#999999;
+    text-decoration: none;
+}
+
+.subtitile {
+    margin:6px;
+    padding: 10px;
+    font-size: 1.2em;
+}
+
+.highlight
+{   border-bottom: solid thin #5c8aca;
+    padding-bottom: 8px;
+
+}
 
 .signature
 {
-    padding-top: 1px;
-    font-size: 2.0em;
-    font-weight: bold;
-    font-family: Tahoma;
+    padding-top: 9px;
+    font-size: 1.4em;
+   
+    font-family:sans-serif;
 }
 
 .social-icon , .social-icon  a
