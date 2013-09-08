@@ -23,6 +23,16 @@ body {
     font-family: Tahoma;
 }
 
+.social-icon , .social-icon  a
+{
+    
+    margin-top:-30px;
+    padding:0px;
+    color:#999999;
+
+
+}
+
 /* Set the fixed height of the footer here */
 #push,
 #footer {
