@@ -1,0 +1,19 @@
+<ul>
+    {% for post in object_list %}
+        <li>{{ post.pub_date|date:"F j, Y" }}: <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>,category : </br>
+        {% for category in post.categories.all %}
+                {{category}}
+
+        {% endfor %}
+        </li>
+    {% endfor %}
+</ul>
+
+<p>
+    {% if previous_month %}
+        Previous Month: {{ previous_month|date:"F Y" }}
+    {% endif %}
+    {% if next_month %}
+        Next Month: {{ next_month|date:"F Y" }}
+    {% endif %}
+</p>

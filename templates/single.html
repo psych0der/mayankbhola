@@ -1,0 +1,17 @@
+{% include 'header.html' %}
+        {% if not posts %}
+        Sorry No post available matching given criteria
+        {% else %} 
+        {% for post in posts %}
+        <h1><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
+        {{ post.text|safe }}
+        {% endfor %}
+        <br />
+        {% if page.has_previous %}
+        <a href="/{{ page.previous_page_number }}/">Previous Page</a>
+        {% endif %}
+        {% if page.has_next %}
+        <a href="/{{ page.next_page_number }}/">Next Page</a>
+        {% endif %}
+        {% endif %}
+{% include 'footer.html' %}

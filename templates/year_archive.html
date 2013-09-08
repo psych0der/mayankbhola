@@ -1,0 +1,19 @@
+<ul>
+    {% for date in date_list %}
+        <li>{{ date|date }}</li>
+    {% endfor %}
+</ul>
+
+<div>
+	{% if not object_list  %}
+	<p> No post available for year {{ year|date:"Y" }}
+	{% else %}
+    <h1>All Articles for {{ year|date:"Y" }}</h1>
+    
+    {% for post in object_list %}
+        <p>
+            <a href="{{ post.get_absolute_url }}">{{ post.title }}</a> - {{ post.pub_date|date:"F j, Y" }}
+        </p>
+    {% endfor %}
+    {% endif %}
+</div>
