@@ -1,10 +1,10 @@
 {% include 'header.html' %}
     <div class="container"> 
     
-        <p class="lead subtitile">> Psyh0der's Web Log </p>
+        <p class="lead subtitile text-danger text-center">> Psyh0der's Web Log </p>
          
 
-        <div class="col-md-10">
+        <div class="col-md-7">
         {% for post in posts %}
         <div class="post">
         <p class="post-title"><a href="{{ post.get_absolute_url }}">{{ post.title |capfirst}}</a></p>
@@ -31,14 +31,19 @@
         {% endfor %}
         <br />
         {% if page.has_previous %}
-        <a href="/{{ page.previous_page_number }}/">Previous Page</a>
+        <a href="/blog/{{ page.previous_page_number }}/">Previous Page</a>
         {% endif %}
         {% if page.has_next %}
-        <a href="/{{ page.next_page_number }}/">Next Page</a>
+        <a href="/blog/{{ page.next_page_number }}/">Next Page</a>
         {% endif %}
          </div>
+
+         <div class="col-md-2">
+            <!-- empty -->
+         </div>
+
         <!-- sidebar -->
-        <div class="col-md-2">
+        <div class="col-md-3">
         {% include 'sidebar.html' %}
         </div>
     </div>

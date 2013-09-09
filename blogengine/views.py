@@ -11,7 +11,7 @@ def getPostsList(request, selected_page=1):
     posts = Post.objects.all().order_by('-pub_date')
 
     # Add pagination
-    pages = Paginator(posts, 5)
+    pages = Paginator(posts, 4)
 
     # Get the specified page
     try:
