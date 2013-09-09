@@ -34,24 +34,26 @@ src: url(../fonts/eurof35.ttf);
 }
 .head
 {
-    margin-bottom:10px;
+    margin-bottom:20px;
     margin-top:5px;
     padding-bottom: 5px;
-
-
 }
 
 .borderd
 {
     border-bottom: thin solid #bbbbbb;
     margin-bottom: 10px;
+    padding: 15px;
+   
 }
 
 .title-heading
 {
     font-family: euro;
     font-size: 4em;
+   
 
+    
 }
 
 
@@ -61,7 +63,7 @@ src: url(../fonts/eurof35.ttf);
     margin:0;
     padding:0;
     display: inline;
-    margin-top: 40px;
+    margin-top: 45px;
 }
 
 .navbar , .navbar a
@@ -84,16 +86,27 @@ src: url(../fonts/eurof35.ttf);
 }
 
 .subtitile {
-    margin:6px;
+    clear:both;
+ 
     padding: 10px;
     font-size: 1.2em;
+    background-color: #eee;
 }
 
 .highlight
-{   border-bottom: solid thin #5c8aca;
+{   
+    color:#999999;
+    border-bottom: solid thin #5c8aca;
     padding-bottom: 8px;
-
+    
 }
+
+.highlight a {
+
+    color: #999999;
+}
+
+
 
 .signature
 {
@@ -112,6 +125,13 @@ src: url(../fonts/eurof35.ttf);
 
 
 }
+
+.social-icon  a:hover {
+
+    color: #4189c8;
+    text-decoration: none;
+}
+
 
 /* Set the fixed height of the footer here */
 #push,

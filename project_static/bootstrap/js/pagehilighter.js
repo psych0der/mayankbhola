@@ -1,10 +1,14 @@
-$(document).ready(funtion(){
+$(document).ready(function(){
 
-var str=location.href.toLowerCase();
-$(".navigation li a").each(function() {
-if (str.indexOf(this.href.toLowerCase()) > -1) {
+var str=location.href.slice(0,-1).toLowerCase().split('/').pop();
+
+
+$(".navbar li a").each(function() {
+	//alert(this.href.slice(0,-1).toLowerCase().split('/').pop());
+if (str.indexOf(this.href.slice(0,-1).toLowerCase().split('/').pop()) > -1) {
 $("li.highlight").removeClass("highlight");
 $(this).parent().addClass("highlight");
+
 }
 
 $("li.highlight").parents().each(function(){
@@ -21,4 +25,4 @@ $(this).addClass("highlight");
 
 
 
-
+});
