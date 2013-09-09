@@ -75,6 +75,14 @@ STATIC_ROOT = os.path.join(PROJECT_DIR, '../static_resources')
 
 CKEDITOR_UPLOAD_PATH = PROJECT_DIR +'/media/uploads'
 
+CKEDITOR_CONFIGS = {
+    'default': {
+        
+    },
+}
+
+
+
 STATIC_URL = '/static/'
 
 # Additional locations of static files

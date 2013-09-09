@@ -2,7 +2,7 @@ from django.shortcuts import render_to_response ,render
 from django.core.paginator import Paginator, EmptyPage
 from blogengine.models import Post, Category
 from django.contrib.syndication.views import Feed
-from mayankbhola.common.sidebar import monthList
+from mayankbhola.common.sidebar import monthList , categoryList
 from django.views.generic.dates import YearArchiveView ,MonthArchiveView
 
 
@@ -20,7 +20,7 @@ def getPostsList(request, selected_page=1):
         returned_page = pages.page(pages.num_pages)
 
     # Display all the posts
-    return render_to_response('posts.html', { 'posts':returned_page.object_list, 'page':returned_page,'months': monthList()})
+    return render_to_response('posts.html', { 'posts':returned_page.object_list, 'page':returned_page,'months': monthList() , 'categories':categoryList()})
 
 def getPost(request, postSlug):
     # Get specified post

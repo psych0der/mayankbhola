@@ -22,6 +22,23 @@ src: url(../fonts/eurof35.ttf);
     src : url(../fonts/QuicksandBook.otf);
 }
 
+@font-face
+{
+    font-family: beb;
+    src : url(../fonts/BebasNeue.otf);
+}
+
+@font-face
+{
+    font-family: fran;
+    src : url(../fonts/Franchise-Bold.ttf);
+}
+
+@font-face
+{
+    font-family: hnew;
+    src : url(../fonts/helvetica-neue-ce-35-thin-1361522164.ttf);
+}
 
 
 /* Wrapper for page content to push down footer */
@@ -30,7 +47,8 @@ src: url(../fonts/eurof35.ttf);
   height: auto !important;
   height: 100%;
   /* Negative indent footer by it's height */
-  margin: 0 auto -60px;
+    margin: 0 auto;
+
 }
 .head
 {
@@ -52,10 +70,7 @@ src: url(../fonts/eurof35.ttf);
     font-family: euro;
     font-size: 4em;
    
-
-    
 }
-
 
 .navbar 
 {
@@ -87,10 +102,68 @@ src: url(../fonts/eurof35.ttf);
 
 .subtitile {
     clear:both;
- 
-    padding: 10px;
-    font-size: 1.2em;
+    margin-top: 10px;
+    padding: 15px;
+    font-size: 2.2em;
     background-color: #eee;
+    font-family: beb;
+   
+    color: #555;
+}
+
+
+.post {
+    margin:6px;
+    padding-bottom: 3px;
+    border-bottom:thin dotted #ccc; 
+}
+
+.post-title {
+    margin-bottom: -5px;
+}
+
+.post-title, .post-title a {
+
+    font-family: hnew;
+    color: #000;
+    font-size : 1.7em;
+}
+
+.post-title a:hover {
+    text-decoration: none;
+}
+
+.post-content  , .post p{
+    margin-top: 5px;
+    font-size: 18px;
+    line-height: 27px;
+    font-family:hnew;
+    
+}
+
+.alist {
+
+    margin-top:-16px;
+    padding-bottom: 6px;
+    border-bottom:thin solid #ddd; 
+
+}
+
+.alist a {
+    font-family : hnew;
+}
+
+.sidebar-section {
+    clear: both;
+    margin-bottom: 10px;
+}
+
+
+
+.categories {
+
+    padding-bottom: 5px;
+
 }
 
 .highlight

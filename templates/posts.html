@@ -1,14 +1,33 @@
 {% include 'header.html' %}
     <div class="container"> 
+    
+        <p class="lead subtitile">> Psyh0der's Web Log </p>
+         
 
-        <p class="lead text-danger">Psyh0der's Web Log</p>
-
-
+        <div class="col-md-10">
         {% for post in posts %}
-        <p><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></p>
-        <p>{{ post.pub_date }}</p>
-        {{ post.text }}
+        <div class="post">
+        <p class="post-title"><a href="{{ post.get_absolute_url }}">{{ post.title |capfirst}}</a></p>
+        <small class="text-danger">{{ post.pub_date|date:'M d , Y' }}</small>
         
+        <p class="post-content">
+            {% autoescape off %}
+            
+                {{ post.text|truncatewords:30 }}
+            
+            {% endautoescape %}
+        </p>
+
+        
+        
+        {% for cat in post.categories.all %}
+            <span><a href="{{cat.get_absolute_url}}">#{{ cat }}</a></span>
+            {% if not forloop.last %}
+            ,
+            {% endif %}
+        {% endfor %}
+        
+        </div>
         {% endfor %}
         <br />
         {% if page.has_previous %}
@@ -17,9 +36,10 @@
         {% if page.has_next %}
         <a href="/{{ page.next_page_number }}/">Next Page</a>
         {% endif %}
-        {% for month in months %}
-            <a href="">{{ month.2}}&nbsp;{{month.0}}</a> <br />
-        {% endfor %}
-
+         </div>
+        <!-- sidebar -->
+        <div class="col-md-2">
+        {% include 'sidebar.html' %}
+        </div>
     </div>
 {% include 'footer.html' %}

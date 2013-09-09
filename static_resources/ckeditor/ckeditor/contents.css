@@ -5,17 +5,21 @@ For licensing, see LICENSE.html or http://ckeditor.com/license
 
 body
 {
-	/* Font */
+	/* Font 
 	font-family: sans-serif, Arial, Verdana, "Trebuchet MS";
 	font-size: 12px;
 
-	/* Text color */
+	 Text color 
 	color: #333;
 
-	/* Remove the background color to make it transparent */
+	/* Remove the background color to make it transparent 
 	background-color: #fff;
-
+	
+	font-size: 18px;
+    line-height: 27px;
+    font-family:geo;
 	margin: 20px;
+	*/
 }
 
 .cke_editable

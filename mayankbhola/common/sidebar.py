@@ -21,7 +21,7 @@ def monthList():
         if y == fyear: end = fmonth-1
 
         for m in range(start, end, -1):
-            months.append((y, m, month_name[m]))
+            months.append((y, m, month_name[m],'/blog/archive/'+str(y)+'/'+str(m)+'/'))
     return months
 
 

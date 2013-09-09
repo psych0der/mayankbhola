@@ -1,0 +1,26 @@
+<div class="pull-right sidebar-section">
+<p class="text-muted archive-heading lead">
+Archive
+</p>
+<ul class="list-unstyled alist">
+  {% for month in months %}
+            <li><a href="{{month.3}}">{{ month.2}}&nbsp;,{{month.0}}</a> </li>
+  {% endfor %}
+</ul>
+
+</br>
+</br>
+
+<p class="text-muted archive-heading lead">
+Categories
+</p>
+<ul class="list-unstyled alist">
+  {% for category in categories %}
+            <li><a href="{{ category.get_absolute_url }}">{{category}}</a> </li>
+  {% endfor %}
+</ul>
+
+
+
+</div>
+
