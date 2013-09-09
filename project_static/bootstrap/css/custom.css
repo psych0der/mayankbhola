@@ -112,7 +112,7 @@ src: url(../fonts/eurof35.ttf);
     text-decoration: none;
 }
 
-.subtitile {
+.subtitle {
     clear:both;
     margin-top: 10px;
     padding: 15px;
@@ -120,7 +120,14 @@ src: url(../fonts/eurof35.ttf);
     background-color: #fff;
     font-family: walk;
     font-weight: bold;
-   /* color: #555;*/
+    color: #555;
+    
+}
+
+.subtitle-text {
+    padding-bottom:6px;
+    border-bottom: thin dotted #ddd;
+
 }
 
 
