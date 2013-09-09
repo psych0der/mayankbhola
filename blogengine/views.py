@@ -27,7 +27,7 @@ def getPost(request, postSlug):
     post = Post.objects.filter(slug=postSlug)
 
     # Display specified post
-    return render_to_response('single.html', { 'posts':post})
+    return render_to_response('single.html', { 'posts':post,'months': monthList() , 'categories':categoryList()})
 
 def getCategory(request, categorySlug, selected_page=1):
     # Get specified category
@@ -54,7 +54,7 @@ def getCategory(request, categorySlug, selected_page=1):
         returned_page = pages.page(pages.num_pages)
 
     # Display all the posts
-    return render_to_response('category.html', { 'posts': returned_page.object_list, 'page': returned_page, 'category': category})
+    return render_to_response('category.html', { 'posts': returned_page.object_list, 'page': returned_page, 'category': category,'months': monthList() , 'categories':categoryList()})
 
 
 
@@ -83,7 +83,7 @@ def getTag(request, tagSlug, selected_page=1):
         returned_page = pages.page(pages.num_pages)
 
     # Display all the posts
-    return render_to_response('category.html', { 'posts': returned_page.object_list, 'page': returned_page, 'category': tag})
+    return render_to_response('category.html', { 'posts': returned_page.object_list, 'page': returned_page, 'category': tag,'months': monthList() , 'categories':categoryList()})
 
 class PostsFeed(Feed):
     title = "Psych0der's Blog posts"
@@ -106,6 +106,8 @@ class PostYearArchiveView(YearArchiveView):
     make_object_list = True
     allow_future = True
     template_name ="year_archive.html"
+    months = monthList()
+    categories = categoryList()
 
 class PostMonthArchiveView(MonthArchiveView):
     queryset = Post.objects.all()
@@ -113,6 +115,8 @@ class PostMonthArchiveView(MonthArchiveView):
     make_object_list = True
     allow_future = True
     template_name = "month_archive.html"
+    months = monthList()
+    categories = categoryList()
 
 
 def handler404(request):

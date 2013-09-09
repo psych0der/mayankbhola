@@ -148,6 +148,7 @@ INSTALLED_APPS = (
     'django.contrib.flatpages',
     'django.contrib.syndication',
     'ckeditor',
+    'django_pygments',
 )
 
 

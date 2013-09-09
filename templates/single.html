@@ -1,17 +1,73 @@
 {% include 'header.html' %}
+        
+        <p class="lead subtitle text-danger"><span class="subtitle-text"> Psyh0der's Web Log </span></p>
+        
         {% if not posts %}
-        Sorry No post available matching given criteria
-        {% else %} 
+        <h1 class="text-center text-danger">Sorry No post available matching given criteria</h1>
+        {% else %}
+
+         <div class="container"> 
+        <div class="col-md-7">
+        {% load pygmentify %}
+        {% pygment %}
         {% for post in posts %}
-        <h1><a href="{{ post.get_absolute_url }}">{{ post.title }}</a></h1>
-        {{ post.text|safe }}
+        <div class="post">
+        <p class="post-title"><a href="{{ post.get_absolute_url }}">{{ post.title |capfirst}}</a></p>
+        <small class="text-danger">{{ post.pub_date|date:'M d , Y' }}</small>
+        
+        <p class="post-content">
+            {% autoescape off %}
+            
+                {{ post.text|truncatewords:30 }}
+            
+            {% endautoescape %}
+        </p>
+
+        
+        
+        {% for cat in post.categories.all %}
+            <span><a href="{{cat.get_absolute_url}}">#{{ cat }}</a></span>
+            {% if not forloop.last %}
+            ,
+            {% endif %}
+        {% endfor %}
+
+        <div class="pull-right">
+        <!-- AddToAny BEGIN -->
+        <div class="a2a_kit a2a_default_style">
+        <a class="a2a_dd" href="http://www.addtoany.com/share_save">Share</a>
+        <span class="a2a_divider"></span>
+        <a class="a2a_button_facebook"></a>
+        <a class="a2a_button_twitter"></a>
+        <a class="a2a_button_google_plus"></a>
+        </div>
+        <script type="text/javascript" src="//static.addtoany.com/menu/page.js"></script>
+<!-- AddToAny END -->
+
+        </div>
+        </div>
         {% endfor %}
         <br />
         {% if page.has_previous %}
-        <a href="/{{ page.previous_page_number }}/">Previous Page</a>
+        <a href="/blog/{{ page.previous_page_number }}/">Previous Page</a>
         {% endif %}
         {% if page.has_next %}
-        <a href="/{{ page.next_page_number }}/">Next Page</a>
+        <a href="/blog/{{ page.next_page_number }}/">Next Page</a>
         {% endif %}
-        {% endif %}
+
+        {% endpygment %}
+
+         </div>
+
+         <div class="col-md-2">
+            <!-- empty -->
+         </div>
+
+        <!-- sidebar -->
+        <div class="col-md-3">
+        {% include 'sidebar.html' %}
+        </div>
+    </div>
+
+    {% endif %}
 {% include 'footer.html' %}
