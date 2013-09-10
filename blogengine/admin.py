@@ -18,7 +18,6 @@ class TagToPostInline(admin.TabularInline):
 
 class PostAdmin(admin.ModelAdmin):
     prepopulated_fields = {"slug": ("title",)}
-    exclude = ('author',)
     inlines = [CategoryToPostInline,TagToPostInline]
 
     def save_model(self, request, obj, form, change):

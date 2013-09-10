@@ -9,13 +9,14 @@ def markdown_to_html( markdownText, images ):
     image_ref = ""
 
     for image in images:
-        image_url =  image.image.url
-        image_ref = "%s\n[%s]: %s\n--%s\n" % ( image_ref, image, image_url,image_url )
+        image_url = image.image.url
+        image_ref = "%s\n[%s]: %s" % ( image_ref, image, image_url )
 
     md = "%s\n%s" % ( markdownText, image_ref )
-    html = markdown(md, ['codehilite'])
+    html = markdown(md)
 
     return html
+
 
 # Create your models here. 
 class Category(models.Model):
@@ -56,19 +57,7 @@ class Post(models.Model):
     pub_date = models.DateTimeField()
     text = models.TextField()
     images = models.ManyToManyField( Image, blank=True )
-    '''
-    RedactorField(
-        verbose_name=u'Text',
-        redactor_options={'lang': 'en', 'focus': 'true'},
-        upload_to='../project_static/',
-        allow_file_upload=True,
-        allow_image_upload=True
-    )
-
-
-    '''
     slug = models.SlugField(max_length=40, unique=True)
-    author = models.ForeignKey(User)
     categories = models.ManyToManyField(Category, blank=True, null=True, through='CategoryToPost')
     tags = models.ManyToManyField(Tag, blank=True, null=True, through='TagToPost')
 

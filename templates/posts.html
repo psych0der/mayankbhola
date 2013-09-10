@@ -5,6 +5,8 @@
          
         <div class="container"> 
         <div class="col-md-7">
+        {% load pygmentify %}
+        {% pygment %}
         {% for post in posts %}
         <div class="post">
         <p class="post-title"><a href="{{ post.get_absolute_url }}">{{ post.title |capfirst}}</a></p>
@@ -37,7 +39,7 @@
         <a href="/blog/{{ page.next_page_number }}/">Next Page</a>
         {% endif %}
          </div>
-
+         {% endpygment%}
          <div class="col-md-2">
             <!-- empty -->
          </div>
