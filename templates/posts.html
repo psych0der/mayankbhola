@@ -13,7 +13,7 @@
         <p class="post-content">
             {% autoescape off %}
             
-                {{ post.text|truncatewords:30 }}
+                {{ post.text_html|truncatewords:30 }}
             
             {% endautoescape %}
         </p>

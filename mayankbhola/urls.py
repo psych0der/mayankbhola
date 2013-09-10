@@ -3,6 +3,8 @@ from django.views.generic.dates import ArchiveIndexView
 from blogengine.views import PostsFeed
 from blogengine.models import Post
 from blogengine.views import PostYearArchiveView ,PostMonthArchiveView
+from django.conf import settings
+from django.conf.urls.static import static
 
 
 # Uncomment the next two lines to enable the admin:
@@ -40,8 +42,14 @@ urlpatterns = patterns('',
     url(r'^blog/$', 'blogengine.views.getPostsList'),
     url(r'^feeds/posts/$', PostsFeed()),
 	url(r'^admin/', include(admin.site.urls)),
-    url(r'', include('django.contrib.flatpages.urls')),
+    url(r'^redactor/', include('redactor.urls')),
     url(r'^ckeditor/', include('ckeditor.urls')),
 )
+
+if settings.DEBUG :
+    urlpatterns +=static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+
 
 handler404 = 'blogengine.views.handler404'

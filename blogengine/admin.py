@@ -25,7 +25,7 @@ class PostAdmin(admin.ModelAdmin):
         obj.author = request.user
         obj.save()
 
-
+admin.site.register(models.Image)
 admin.site.register(models.Tag,TagAdmin)
 admin.site.register(models.Post, PostAdmin)
 admin.site.register(models.Category, CategoryAdmin)
