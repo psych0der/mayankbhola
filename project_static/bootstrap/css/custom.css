@@ -59,6 +59,12 @@ src: url(../fonts/eurof35.ttf);
     src : url(../fonts/MankSans.ttf);
 }
 
+@font-face
+{
+    font-family: opens;
+    src : url(../fonts/OpenSans-Regular.ttf);
+}
+
 
 /* Wrapper for page content to push down footer */
 #wrap {
@@ -120,14 +126,28 @@ src: url(../fonts/eurof35.ttf);
     text-decoration: none;
 }
 
+
+.highlight
+{   
+    color:#999999;
+    border-bottom: solid thin #5c8aca;
+    padding-bottom: 8px;
+    
+}
+
+.highlight a {
+
+    color: #999999;
+}
+
 .subtitle {
     clear:both;
     margin-top: 2px;
     padding: 30px;
     padding-top: 25px;
     font-size: 1.4em;
-    font-family: sans-serif;
-    font-weight: bold;
+    font-family: opens;
+    font-size: 19px;
     color: #555555;
     margin-bottom: 50px;
     background-color:#f7f7f7; 
@@ -140,6 +160,21 @@ src: url(../fonts/eurof35.ttf);
     margin-left:40px;
     /*border-bottom: thin dotted #ddd;*/
 
+}
+
+.sub-sub-titile {
+    font-family: beb;
+    font-size :2.2em;
+    margin-bottom: 20px;
+    margin-top:-10px;
+    color:#ddd;
+
+}
+
+.backlight {
+    padding : 8px;
+    color:#999;
+    background-color: #f7f7f7;
 }
 
 
@@ -158,7 +193,7 @@ src: url(../fonts/eurof35.ttf);
 
     font-family: hnew;
     color: #000;
-    font-size : 1.9em;
+    font-size : 2.0em;
     font-weight: bold;
 }
 
@@ -172,7 +207,7 @@ src: url(../fonts/eurof35.ttf);
 
 .post-content  , .post p{
     margin-top: 5px;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 27px;
     font-family:hnew;
     
@@ -203,21 +238,6 @@ src: url(../fonts/eurof35.ttf);
 
     padding-bottom: 5px;
 
-}
-
-
-
-.highlight
-{   
-    color:#999999;
-    border-bottom: solid thin #5c8aca;
-    padding-bottom: 8px;
-    
-}
-
-.highlight a {
-
-    color: #999999;
 }
 
 

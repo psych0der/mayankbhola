@@ -20,14 +20,14 @@ def getPostsList(request, selected_page=1):
         returned_page = pages.page(pages.num_pages)
 
     # Display all the posts
-    return render_to_response('posts.html', { 'posts':returned_page.object_list, 'page':returned_page,'months': monthList() , 'categories':categoryList()})
+    return render_to_response('posts.html', { 'posts':returned_page.object_list, 'page':returned_page,'months': monthList() , 'categories':categoryList(),'type':'blog'})
 
 def getPost(request, postSlug):
     # Get specified post
     post = Post.objects.filter(slug=postSlug)
 
     # Display specified post
-    return render_to_response('single.html', { 'posts':post,'months': monthList() , 'categories':categoryList()})
+    return render_to_response('single.html', { 'posts':post,'months': monthList() , 'categories':categoryList(),'type':'blog'})
 
 def getCategory(request, categorySlug, selected_page=1):
     # Get specified category
@@ -54,7 +54,7 @@ def getCategory(request, categorySlug, selected_page=1):
         returned_page = pages.page(pages.num_pages)
 
     # Display all the posts
-    return render_to_response('category.html', { 'posts': returned_page.object_list, 'page': returned_page, 'category': category,'months': monthList() , 'categories':categoryList()})
+    return render_to_response('category.html', { 'posts': returned_page.object_list, 'page': returned_page, 'category': category,'months': monthList() , 'categories':categoryList(),'type':'blog'})
 
 
 
@@ -115,8 +115,14 @@ class PostMonthArchiveView(MonthArchiveView):
     make_object_list = True
     allow_future = True
     template_name = "month_archive.html"
-    months = monthList()
-    categories = categoryList()
+    def get_context_data(self, *args, **kwargs):
+        context = super(PostMonthArchiveView, self).get_context_data(*args, **kwargs)
+        context['months'] = monthList()
+        context['categories'] = categoryList()
+        context['type']='blog'
+
+        return context
+    
 
 
 def handler404(request):

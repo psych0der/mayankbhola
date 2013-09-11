@@ -1,19 +1,57 @@
-<ul>
-    {% for post in object_list %}
-        <li>{{ post.pub_date|date:"F j, Y" }}: <a href="{{ post.get_absolute_url }}">{{ post.title }}</a>,category : </br>
-        {% for category in post.categories.all %}
-                {{category}}
 
+{% include 'header.html' %}
+        
+         <p class="lead subtitle"><span class="subtitle-text"> Psyh0der's Web Log</span></p>
+         
+        <div class="container"> 
+        <p class="sub-sub-titile">Posts for &nbsp;:&nbsp; {{month|date:"M ,Y"}}</p>
+        <div class="col-md-7">
+        {% load pygmentify %}
+        {% pygment %}
+        {% for post in object_list %}
+        <div class="post">
+        <p class="post-title"><a href="{{ post.get_absolute_url }}">{{ post.title |capfirst}}</a></p>
+        <small class="text-danger">{{ post.pub_date|date:'M d , Y' }}</small>
+        
+        <p class="post-content">
+            {% autoescape off %}
+            
+                {{ post.text_html|truncatewords:30 }}
+            
+            {% endautoescape %}
+        </p>
+  
+        {% for cat in post.categories.all %}
+            <span><a href="{{cat.get_absolute_url}}">#{{ cat }}</a></span>
+            {% if not forloop.last %}
+            ,
+            {% endif %}
         {% endfor %}
-        </li>
-    {% endfor %}
-</ul>
+        
+        </div>
+        {% endfor %}
+        <br />
+        {% if page.has_previous %}
+        <a href="/blog/{{ page.previous_page_number }}/">Previous Page</a>
+        {% endif %}
+        {% if page.has_next %}
+        <a href="/blog/{{ page.next_page_number }}/">Next Page</a>
+        {% endif %}
+         </div>
+         {% endpygment%}
+         <div class="col-md-2">
+            <!-- empty -->
+         </div>
 
-<p>
-    {% if previous_month %}
-        Previous Month: {{ previous_month|date:"F Y" }}
-    {% endif %}
-    {% if next_month %}
-        Next Month: {{ next_month|date:"F Y" }}
-    {% endif %}
-</p>
+        <!-- sidebar -->
+        <div class="col-md-3">
+        {% include 'sidebar.html' %}
+        </div>
+        </br>
+
+
+    </div>
+
+
+
+{% include 'footer.html' %}

@@ -13,7 +13,7 @@
 
     <script src="{% static 'bootstrap/js/jquery.js' %}"></script>
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
-    <script src="{% static 'bootstrap/js/pagehilighter.js' %}"></script>
+    <!-- <script src="{% static 'bootstrap/js/pagehilighter.js' %}"></script> -->
 
 
 
@@ -41,7 +41,7 @@
 
   <ul class="pull-right navbar">
   <li><a href="localhost:8000/me/" id="Who Am I">Who Am I</a></li>
-  <li><a href="http://localhost:8000/blog/">Blog</a></li>
+  <li><a href="http://localhost:8000/blog/" {%if type == "blog" %} class="highlight" {%endif%}>Blog</a></li>
   <li><a href="localhost:8000/work/">Work</a></li>
   <li><a href="localhost:8000/experiments/">Experiments</a></li>
   </ul>
