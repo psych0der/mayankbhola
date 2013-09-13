@@ -207,9 +207,9 @@ src: url(../fonts/eurof35.ttf);
 
 .post-content  , .post p{
     margin-top: 5px;
-    font-size: 17px;
+    font-size: 14px;
     line-height: 27px;
-    font-family:hnew;
+    font-family:opens;
     
 }
 
@@ -239,6 +239,24 @@ src: url(../fonts/eurof35.ttf);
     padding-bottom: 5px;
 
 }
+
+
+.about {
+
+    padding:20px;
+}
+
+.hello
+{
+    font-family: opens;
+    color:#000;
+    line-height: 220px;
+    font-size: 220px;
+    font-weight: bold;
+}
+
+
+
 
 
 

@@ -6,6 +6,16 @@ from mayankbhola.common.sidebar import monthList , categoryList
 from django.views.generic.dates import YearArchiveView ,MonthArchiveView
 
 
+
+
+
+
+def aboutMe(request):
+      return render_to_response('about.html', { 'type':'about'})
+
+
+
+
 def getPostsList(request, selected_page=1):
     # Get all blog posts
     posts = Post.objects.all().order_by('-pub_date')
@@ -123,6 +133,8 @@ class PostMonthArchiveView(MonthArchiveView):
 
         return context
     
+
+
 
 
 def handler404(request):

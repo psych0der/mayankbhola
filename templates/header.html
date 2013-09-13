@@ -40,7 +40,7 @@
   </h1>
 
   <ul class="pull-right navbar">
-  <li><a href="localhost:8000/me/" id="Who Am I">Who Am I</a></li>
+  <li><a href="http://localhost:8000/about/" {%if type == "about" %} class="highlight" {%endif%}  id="Who Am I">Who Am I</a></li>
   <li><a href="http://localhost:8000/blog/" {%if type == "blog" %} class="highlight" {%endif%}>Blog</a></li>
   <li><a href="localhost:8000/work/">Work</a></li>
   <li><a href="localhost:8000/experiments/">Experiments</a></li>
