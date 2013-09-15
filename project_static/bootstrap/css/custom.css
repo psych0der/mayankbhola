@@ -302,7 +302,10 @@ background-color: #000;
 .intro2 {
     background-color:#cf143c;
     
-    
+}
+
+.intro2 a {
+    color:#7ae44c;
 }
 
 .intro3 {
