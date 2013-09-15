@@ -287,7 +287,6 @@ src: url(../fonts/eurof35.ttf);
 .intro{
     padding : 25px;
     text-align: center;
-    font-size : 1.6em;
     font-family: sans-serif;
     margin:0px;
     background-color: #000;
@@ -308,6 +307,7 @@ background-color: #000;
 
 .intro3 {
     background-color:#009ff7;
+
     
 }
 
@@ -317,8 +317,54 @@ background-color: #000;
 
 }
 
+.skills li {
+    margin-left: 60px;
+}
 
 
+.skills span {
+    font-family: opens;
+    font-size: 1.7em;
+    color:#000;
+    margin-bottom:10px; 
+}
+
+.social2 {
+    background-color:#009ff7;
+    margin:0px;
+    margin-bottom: 0px;
+    padding:25px;
+
+}
+
+.bottom {
+    padding-bottom: -5px;
+}
+
+.social2 li,.social2 li a{
+background-color:#009ff7;
+margin-left: 50px;
+color:#fff;
+font-size: 1.5em;
+text-decoration: none;
+}
+
+
+.intro5{
+    color: #000;
+    background-color: #fff;
+    text-align: none;
+}
+
+.intro6{
+    color: #000;
+    background-color: #fff055;
+    font-size: 1.9em;
+}
+
+.rotate {
+    margin: 0px;
+}
 
 .marker {
     font-family:Marker felt;
@@ -328,6 +374,10 @@ background-color: #000;
 
 .big-font {
     font-size: 1.9em;
+}
+
+.small {
+    font-size:0.9em;
 }
 
 .beb {
