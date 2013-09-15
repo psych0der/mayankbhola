@@ -65,6 +65,17 @@ src: url(../fonts/eurof35.ttf);
     src : url(../fonts/OpenSans-Regular.ttf);
 }
 
+@font-face
+{
+    font-family: hneubold;
+    src : url(../fonts/hneubold.otf);
+}
+
+@font-face {
+    font-family: opensbold;
+    src : url(../fonts/OpenSans-Bold.ttf);
+}
+
 
 /* Wrapper for page content to push down footer */
 #wrap {
@@ -248,11 +259,166 @@ src: url(../fonts/eurof35.ttf);
 
 .hello
 {
-    font-family: opens;
+    font-family: opensbold;
     color:#000;
     line-height: 220px;
-    font-size: 220px;
-    font-weight: bold;
+    font-size: 200px;
+   
+}
+.char2:hover {
+    color:#87d14b;
+}
+.char3:hover{
+    color:#009ff7;
+}
+
+.char4:hover {
+    color:#ff007c;
+    
+}
+
+.char5:hover {
+    color:#87d14b;
+}
+.char6:hover{
+    color:#009ff7;
+}
+
+.intro{
+    padding : 25px;
+    text-align: center;
+    font-size : 1.6em;
+    font-family: sans-serif;
+    margin:0px;
+    background-color: #000;
+    color: #fff;
+    font-size:2.3em;
+    
+}
+
+.intro1 {
+background-color: #000;
+}
+
+.intro2 {
+    background-color:#cf143c;
+    
+    
+}
+
+.intro3 {
+    background-color:#009ff7;
+    
+}
+
+.intro4 {
+    color:#000;
+    background-color:#5ac713;
+
+}
+
+
+
+
+.marker {
+    font-family:Marker felt;
+    font-size:1.5em;
+  
+}
+
+.big-font {
+    font-size: 1.9em;
+}
+
+.beb {
+    font-family: beb;
+    letter-spacing: 3px;
+}
+
+.quick {
+    font-family: quick;
+}
+
+.opens {
+    font-family: opens;
+}
+
+.fran {
+    font-family: fran;
+}
+
+.hnew {
+    font-family: hnew;
+}
+
+.relative {
+    position: relative;
+}
+
+.mank{
+    font-family: mank;
+}
+
+.polaroid {
+    margin-top: 10px;
+
+
+
+}
+
+.polaroid img {
+    width:320px; 
+    height: auto;
+    display: block;
+    margin-bottom: 12px;
+
+
+}
+
+
+.img-container {
+     background: #fff; 
+     display: inline; 
+     float: left; 
+     width: auto; 
+     padding: 10px 10px 15px; 
+     text-align: center; 
+     font-family:hnew; 
+     color: #333; 
+     font-size: 18px;
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.25);
+    -webkit-transform: rotate(-3deg); 
+    -webkit-transition: -webkit-transform .15s linear;
+    -moz-transform: rotate(-3deg); 
+    margin-bottom: 30px;
+    margin-top:-10px;
+   
+}
+
+.img-container:after {
+    content: attr(title); 
+}
+
+.img-container:hover {
+    -webkit-transform: scale(1.15);
+    -moz-transform: scale(1.15);
+    -webkit-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+    -moz-box-shadow: 0 3px 6px rgba(0,0,0,.5);
+    position: relative;
+    z-index: 5;
+}
+
+.about-text-title {
+    text-align: center;
+    font-family: hnew;
+    font-size:1.6em;
+    clear:both;
+    margin-top: 10px;
+    text-align: center;
+    color:#428bca;
+    margin-top:-5px;
+    
 }
 
 
@@ -292,21 +458,11 @@ src: url(../fonts/eurof35.ttf);
 }
 #footer {
     margin-top:10px;
-  background-color: #f7f7f7;
-  padding-top: 9px;
+    background-color: #f7f7f7;
+    padding-top: 9px;
 }
 
 #footer p
 {
     padding-top: 12px;
-}
-
-/* Lastly, apply responsive CSS fixes as necessary */
-@media (max-width: 767px) {
-#footer {
-  margin-left: -20px;
-  margin-right: -20px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
 }
