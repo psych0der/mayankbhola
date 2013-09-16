@@ -1,0 +1,121 @@
+{% include 'header.html' %}
+        
+    <p class="lead subtitle text-danger"><span class="subtitle-text"> Projects </span></p>
+    <div class="container"> 
+        <div class="col-md-8">
+        <i class="icon-quote-left icon-4x pull-left icon-muted"></i>
+        <p class="lead text-left project-intro hnew">
+		All of my projects are made using open source technologies and libraries and are hosted on 
+        <a href="github.com/psych0der">github</a>.I try to push the updated code as much as possible.
+        I try my best to maintain informative readme for every project , but if you feel or sense some anomaly or missing info 
+        &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; or any other issue, feel free to communicate.
+		</p>
+		
+		</br>
+
+		
+
+		<div class="project">
+		<header class="opens"><span>mayankbhola.in</span></header>
+		<div class="project-content hnew">
+		This website , mayankbhola.in is my latest web programming project(self evident :p) built on open source technologies.
+		I have tried to build it as 
+		more of a portfolio website where i can display my projects and write about myself.Here , like always i have given
+		major attention to look and feel for great experience.This website is built upon django for server side support , uses
+		bootstrap along with jquery for frontend.Further pygments and markdown modules for python are used for content editing
+		such as blog posts.It uses <a href="http://johnpolacek.github.io/superscrollorama/">scrollorama</a> , <a href="http://www.greensock.com">greensock</a> , <a href="http://anthonyterrien.com/knob/">jquery knob</a> for home page UI and disqus powered comments for blog post.
+		Further it uses require.js for lazy loading of website resources.
+		I'll will push the code to github after removing site specific config files.
+		</br>
+	
+		</div>
+		</div>
+
+
+		<div class="project">
+		<header class="opens"><span>dbaseView</span></header>
+		<div class="project-content hnew">
+		dBaseView is a PHP based CRUD(Create, Read, Update, Delete) application , for basic contact management
+		purposes.Designed with companies requirement in mind.It provides record(contact) management for client and companies
+		and stores various fiels like PAN,DIN (relavant for tax purposes).It also provides basic search functionality for client and 
+		company record based on few key values such as first name , last name , PAN number and DIN number.
+		It is an lightweight alternative for basic contact management that can be run on local php server such as <a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a>.Project code can be found <a href="https://github.com/psych0der/DbaseView">here</a>.
+		Project repo contains config file that need to edited before use.Project readme provides relavant details.
+		</br>
+		<h4>Project link : <a href="https://github.com/psych0der/DbaseView">dBaseView</a> </h4>
+		</div>
+		</div>
+
+
+		<div class="project">
+		<header class="opens"><span>PHP mysqli adapter</span></header>
+		<div class="project-content hnew">
+		PHP mysqli adapter is abstraction of basic database funtions such as select, insert, update and delete ,into
+		easy to use and flexible classes.It provides hassle free interface for database interaction with flexible argument list.
+		In addition it wraps the result of select queries in arrys with coloumn name as indexes for easy access information and includes
+		sufficient error handling and support for pagination using sql limit funtionality.Project repo has nice
+		readme file depicting usage examples.
+		
+		</br>
+		<h4>Project link : <a href="https://github.com/psych0der/PHP-MySqli-connector">PHP-mysqli adapter</a> </h4>
+		</div>
+		</div>
+
+		<div class="project">
+		<header class="opens"><span>PyShare</span></header>
+		<div class="project-content hnew">
+		Pyshare is local network based file sharing suite , built over twisted library for 
+		asynchronous communucation.It is multi-user server client based application, which
+		runs over TCP/IP and provides file sharinfg functionalities.It includes support for assigning nicknames to 
+		peer systems in local network and accessing those hosts using that nickname.Pyshare features folder sync functionality
+		which can determine which file to update at run time.Best part of pyshare is that ,
+		clients dont need to be manually configured to connect to server, this process is automated with local network discovery tools
+		like ping and handles the conection between client and server.Project readme further describes the 
+		funtionality of the project.
+		</br>
+		<h4>Project link : <a href="https://github.com/psych0der/pyshare">PyShare</a> </h4>
+		</div>
+		</div>
+
+		
+		<div class="project">
+		<header class="opens"><span>Othenticator</span></header>
+		<div class="project-content hnew">
+		Othenticator is PHP wrapper class for oauth sdk of various services.Uses facebook and google sdk for ouath.
+		Can be extended to support other services.It tries to use login information step by step and then fallback 
+		to use sites custom login for authentication.By default ,it tries first to determine if user is logged in to 
+		facebook , then it tries for google and then sites custom authentication. 
+		</br>
+		<h4>Project link : <a href="https://github.com/psych0der/Othenticator">Othenticator</a> </h4>
+		</div>
+		</div>
+
+
+
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+        </div>
+
+    </div>
+
+
+
+
+
+
+
+
+
+{% include 'footer.html' %}

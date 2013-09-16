@@ -169,6 +169,7 @@ src: url(../fonts/eurof35.ttf);
 .subtitle-text {
     padding-bottom:1px;
     margin-left:40px;
+    
     /*border-bottom: thin dotted #ddd;*/
 
 }
@@ -412,11 +413,12 @@ text-decoration: none;
     font-family: mank;
 }
 
+.cd {
+    font-family: cd;
+}
+
 .polaroid {
     margin-top: 10px;
-
-
-
 }
 
 .polaroid img {
@@ -424,8 +426,10 @@ text-decoration: none;
     height: auto;
     display: block;
     margin-bottom: 12px;
+}
 
-
+.project-intro {
+    font-size: 1.2em;
 }
 
 
@@ -519,3 +523,34 @@ text-decoration: none;
 {
     padding-top: 12px;
 }
+
+
+
+
+/* ******************************* 
+
+        project page
+    
+
+ *******************************  */
+
+.project {
+    margin:10px;
+    padding: 15px;
+    font-size:1.3em;
+}
+
+.project header span {
+    margin-bottom: 10px;
+    font-size:1.4em;
+    border-bottom: thin dotted #ccc;
+}
+.project-content {
+    margin-top:15px;
+    font-size:0.9em;
+    color:#999;
+    text-align: justify;
+    text-justify: newspaper;
+}
+
+

@@ -14,6 +14,10 @@ def aboutMe(request):
       return render_to_response('about.html', { 'type':'about'})
 
 
+def projects(request):
+      return render_to_response('projects.html', { 'type':'project'})
+
+
 
 
 def getPostsList(request, selected_page=1):

@@ -18,14 +18,19 @@ urlpatterns = patterns('',
 
     #url(r'^blog/archive/(?P<year>[\d]+)/(?P<month>[\d]+)/$', 'blogengine.views.date_archive', name="blog-date-archive"), 
     
-     url(r'^blog/archive/(?P<year>\d{4})/(?P<month>\d+)/$',
-        PostMonthArchiveView.as_view(month_format='%m'),
-        name="archive_month_numeric"),
+     
 
     url(r'^about/$', 'blogengine.views.aboutMe'),
+    url(r'^projects/$', 'blogengine.views.projects'),
+
+
     url(r'^blog/archive/(?P<year>\d{4})/(?P<month>[-\w]+)/$',
         PostMonthArchiveView.as_view(),
         name="archive_month"),
+
+    url(r'^blog/archive/(?P<year>\d{4})/(?P<month>\d+)/$',
+        PostMonthArchiveView.as_view(month_format='%m'),
+        name="archive_month_numeric"),
 
     url(r'^blog/category/(?P<categorySlug>[-\w]+)/(?P<selected_page>\d+)/?$', 'blogengine.views.getCategory'),
     url(r'^blog/category/(?P<categorySlug>[-\w]+)/$', 'blogengine.views.getCategory'),

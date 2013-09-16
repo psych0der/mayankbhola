@@ -10,7 +10,7 @@
     <link href="{% static 'bootstrap/css/custom.css' %}" rel="stylesheet" media="screen">
     <link href="{% static 'bootstrap/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" media="screen">
     <link href="{% static 'pygments/tango.css' %}" rel="stylesheet" media="screen">
-    
+
     <script src="{% static 'bootstrap/js/jquery.js' %}"></script>
     <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
     <!-- <script src="{% static 'bootstrap/js/pagehilighter.js' %}"></script> -->
@@ -25,7 +25,7 @@
       <script src="../../assets/js/respond.min.js"></script>
     <![endif]-->
      <script type="text/javascript">
-     var disqus_developer = 1; // this would set it to developer mode
+     //var disqus_developer = 1; // this would set it to developer mode
     </script>
 
   </head>
@@ -40,10 +40,10 @@
   </h1>
 
   <ul class="pull-right navbar">
-  <li><a href="http://localhost:8000/about/" {%if type == "about" %} class="highlight" {%endif%}  id="Who Am I">Who Am I</a></li>
-  <li><a href="http://localhost:8000/blog/" {%if type == "blog" %} class="highlight" {%endif%}>Blog</a></li>
-  <li><a href="localhost:8000/work/">Work</a></li>
-  <li><a href="localhost:8000/experiments/">Experiments</a></li>
+  <li><a href="/about/" {%if type == "about" %} class="highlight" {%endif%}  id="Who Am I">Who Am I</a></li>
+  <li><a href="/blog/" {%if type == "blog" %} class="highlight" {%endif%}>Blog</a></li>
+  <li><a href="/projects/"{%if type == "project" %} class="highlight" {%endif%} >Projects</a></li>
+  <li><a href="/playground/">Playground</a></li>
   </ul>
   
   </header>

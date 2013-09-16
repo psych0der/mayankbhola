@@ -71,6 +71,8 @@ controller.addTween('#fade1', TweenMax.from( $('#fade1'), .6, {css:{opacity: 0}}
 controller.addTween('#fade2', TweenMax.from( $('#fade2'), .6, {css:{opacity: 0}}));
 controller.addTween('#fade3', TweenMax.from( $('#fade3'), .6, {css:{opacity: 0}}));
 
+controller.addTween('#aka', TweenMax.from( $('#aka'), .10, {css:{opacity:0}, ease:Quad.easeInOut}));
+
 controller.addTween('#mayank', TweenMax.from( $('#mayank'), .25, {css:{right:'2000px'}, ease:Quad.easeInOut}));
 controller.addTween('#bhola', TweenMax.from( $('#bhola'), .25, {css:{left:'3000px'}, ease:Quad.easeInOut}));
 
