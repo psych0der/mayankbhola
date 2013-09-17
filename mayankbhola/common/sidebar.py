@@ -28,7 +28,7 @@ def monthList():
 
 def categoryList():
     if not Category.objects.count() : return []
-    categories = Category.objects.all()
+    categories = Category.objects.all()[0:10]
     return categories
 
 

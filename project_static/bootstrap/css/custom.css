@@ -405,6 +405,10 @@ text-decoration: none;
     font-family: hnew;
 }
 
+.hneubold {
+    font-family: hneubold;
+}
+
 .relative {
     position: relative;
 }

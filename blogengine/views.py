@@ -18,6 +18,8 @@ def projects(request):
       return render_to_response('projects.html', { 'type':'project'})
 
 
+def playground(request):
+      return render_to_response('playground.html', { 'type':'playground'})
 
 
 def getPostsList(request, selected_page=1):
