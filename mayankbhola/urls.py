@@ -43,6 +43,7 @@ urlpatterns = patterns('',
     url(r'^blog/$', 'blogengine.views.getPostsList'),
     url(r'^feeds/posts/$', PostsFeed()),
 	url(r'^admin/', include(admin.site.urls)),
+    url(r'^$', 'blogengine.views.aboutMe'),
     
 )
 

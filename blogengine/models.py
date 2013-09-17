@@ -1,6 +1,5 @@
 from django.db import models
 from django.contrib.auth.models import User
-from ckeditor.fields import RichTextField
 from markdown import markdown
 from django.conf import settings
 #from redactor.fields import RedactorField
