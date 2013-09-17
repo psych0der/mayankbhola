@@ -52,4 +52,3 @@ if settings.DEBUG :
 
 
 
-handler404 = 'blogengine.views.handler404'
