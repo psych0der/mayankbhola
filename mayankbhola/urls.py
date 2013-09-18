@@ -7,6 +7,7 @@ from django.conf import settings
 from django.conf.urls.static import static
 
 
+
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
 admin.autodiscover()
@@ -43,7 +44,7 @@ urlpatterns = patterns('',
     url(r'^blog/$', 'blogengine.views.getPostsList'),
     url(r'^feeds/posts/$', PostsFeed()),
 	url(r'^admin/', include(admin.site.urls)),
-    url(r'^$', 'blogengine.views.aboutMe'),
+    url(r'^$', 'blogengine.views.index'),
     
 )
 

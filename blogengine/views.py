@@ -10,6 +10,10 @@ from django.views.generic.dates import YearArchiveView ,MonthArchiveView
 
 
 
+def index(request):
+      return render_to_response('index.html', { 'type':'home'})
+
+
 def aboutMe(request):
       return render_to_response('about.html', { 'type':'about'})
 

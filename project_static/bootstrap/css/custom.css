@@ -86,6 +86,8 @@ src: url(../fonts/eurof35.ttf);
     margin: 0 auto;
 
 }
+
+
 .head
 {
     margin-bottom:20px;
@@ -130,13 +132,45 @@ src: url(../fonts/eurof35.ttf);
 {   display: inline;
     margin-right: 35px;
 
-    
 }
 .navbar a:hover {
     color:#999999;
     text-decoration: none;
+
 }
 
+.main-list{
+    text-align:center;
+    float:none;
+    clear:both;
+    font-size:1.9em;
+
+   
+   
+
+}
+
+/*
+.main-list-wrapper {
+     padding:20px;
+    border-bottom: thin dashed #ccc;
+}
+*/
+
+
+.main-list a {
+    color:#428bca;
+  font-size:2.0em;
+}
+
+.main-list a:hover {
+
+    color:#999999;
+    text-decoration: none;
+    padding-bottom:8px;
+    border-bottom: solid thin #5c8aca;
+
+}
 
 .highlight
 {   
@@ -165,6 +199,7 @@ src: url(../fonts/eurof35.ttf);
 
     
 }
+
 
 .subtitle-text {
     padding-bottom:1px;
@@ -420,6 +455,16 @@ text-decoration: none;
 .cd {
     font-family: cd;
 }
+
+.big-big-font {
+    font-size:2.3em;
+}
+
+.extra-padding {
+    padding : 30px;
+}
+
+
 
 .polaroid {
     margin-top: 10px;

@@ -1,0 +1,83 @@
+<html>
+  <head>
+    <title>Mayank Bhola</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+    <!-- Bootstrap -->
+    {% load staticfiles %}
+    <link href="{% static 'bootstrap/css/bootstrap.min.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'bootstrap/css/custom.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'bootstrap/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" media="screen">
+    <link href="{% static 'pygments/tango.css' %}" rel="stylesheet" media="screen">
+
+    <script src="{% static 'bootstrap/js/jquery.js' %}"></script>
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+    <!-- <script src="{% static 'bootstrap/js/pagehilighter.js' %}"></script> -->
+
+
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="../../assets/js/html5shiv.js"></script>
+      <script src="../../assets/js/respond.min.js"></script>
+    <![endif]-->
+     <script type="text/javascript">
+     //var disqus_developer = 1; // this would set it to developer mode
+    </script>
+
+  </head>
+  <body>
+  
+  <div id="wrap" style="margin-bottom:-60px;">
+ 
+  <div class="borderd container">
+  <header class="head">
+  <h1 class="pull-left title-heading">
+  Mayank<span class="text-muted">Bhola</span>
+  </h1>
+  </header>
+  </div>
+
+  <p class="lead subtitle text-danger text-center extra-padding big-big-font"><span class="subtitle-text"> Welcome to mayankbhola.in </span></p>
+    <div class="container"> 
+
+  <div class="col-md-11 col-md-offset-2 main-list-wrapper">
+  
+      <ul class="navbar main-list text-center text-primary">
+  <li><a href="/about/" {%if type == "about" %} class="highlight" {%endif%}  id="Who Am I">Who Am I</a></li>
+  <li><a href="/blog/" {%if type == "blog" %} class="highlight" {%endif%}>Blog</a></li>
+  <li><a href="/projects/"{%if type == "project" %} class="highlight" {%endif%} >Projects</a></li>
+  <li><a href="/playground/" {%if type == "playground" %} class="highlight" {%endif%} >Playground</a></li>
+  </ul>
+
+  </div>
+
+    </div>
+</div> <!-- /wrap -->
+<div id="footer" >
+      <div class="container">
+      <span class="pull-left signature text-muted ">
+        #psych0der
+      </span>
+        <p class="text-muted text-center">Handcrafted with love by <a href="http://github.com/psych0der">Mayank Bhola.</a></p>
+        <span class="pull-right">
+          <ul class="list-inline social-icon">
+
+          <li><a href="http://facebook.com/mayank.bhola"><span class="icon-facebook icon-2x"></span></a></li>
+          <li><a href="http://twitter.com/mayankbhola"><span class="icon-twitter icon-2x"></span></a></li>
+          <li><a href="http://github.com/psych0der"><span class="icon-github icon-2x"></span></a></li>
+      </ul>
+        </span>
+
+      </div>
+</div>
+
+</body>
+</html>
+
+
+
+
+   
