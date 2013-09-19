@@ -79,7 +79,7 @@ controller.addTween('#bhola', TweenMax.from( $('#bhola'), .25, {css:{left:'3000p
 controller.addTween('#action2', TweenMax.from( $('#action2'), .10, {css:{fontSize:'3px'}, ease:Quad.easeInOut}));
 controller.addTween('#action3', TweenMax.from( $('#action3'), .10, {css:{opacity:0}, ease:Quad.easeInOut}));
 
-controller.addTween('#action4', TweenMax.from( $('#action4'), .25, {css:{right:'2000px'}, ease:Quad.easeInOut}));
+controller.addTween('#action4', TweenMax.from( $('#action4'), .25, {css:{right:'1800px'}, ease:Quad.easeInOut}));
 controller.addTween('#action5', TweenMax.from( $('#action5'), .25, {css:{left:'3000px'}, ease:Quad.easeInOut}));
 
 controller.addTween('#action6', TweenMax.fromTo( $('#action6'), .30, {css:{opacity:0, 'letter-spacing':'80px'}, immediateRender:true, ease:Quad.easeInOut}, {css:{opacity:1, 'letter-spacing':'14px'}, ease:Quad.easeInOut}), 0, 100);
