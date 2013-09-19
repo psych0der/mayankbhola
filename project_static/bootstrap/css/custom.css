@@ -104,11 +104,19 @@ src: url(../fonts/eurof35.ttf);
    
 }
 
-.title-heading
-{
+.title-heading {
     font-family: euro;
     font-size: 4.7em;
+    color:#000;
    
+}
+
+.title-heading a {
+    color:#000;
+}
+
+.title-heading a:hover {
+    text-decoration:none;
 }
 
 .navbar 
