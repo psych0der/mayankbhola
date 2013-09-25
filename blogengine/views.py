@@ -25,6 +25,9 @@ def projects(request):
 def playground(request):
       return render_to_response('playground.html', { 'type':'playground'})
 
+def contact(request):
+      return render_to_response('contact.html', { 'type':'contact'})
+
 
 def getPostsList(request, selected_page=1):
     # Get all blog posts

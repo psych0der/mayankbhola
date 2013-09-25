@@ -217,6 +217,10 @@ src: url(../fonts/eurof35.ttf);
 
 }
 
+
+
+
+
 .sub-sub-titile {
     font-family: beb;
     font-size :2.2em;
@@ -537,9 +541,6 @@ text-decoration: none;
 
 
 
-
-
-
 .signature
 {
     padding-top: 9px;
@@ -547,6 +548,12 @@ text-decoration: none;
    
     font-family:sans-serif;
 }
+.signature a  , .signature a:hover{
+    text-decoration: none;
+    color:#949494;
+}
+
+
 
 .social-icon , .social-icon  a
 {
@@ -564,6 +571,43 @@ text-decoration: none;
     text-decoration: none;
 }
 
+.contact-title {
+    
+    color:#fff;
+    font-size:4.1em;
+}
+.contact-list {
+   
+    float: none;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top:15px;
+    font-family:hnew;
+}
+
+.contact-list li {
+    margin: 20px;
+   
+}
+
+.contact-container {
+   
+    padding:40px;
+    font-size:3.2em; 
+    color:#bbb; 
+    
+}
+
+.contact-desc {
+    font-size:1.9em;
+    padding-top:10px;
+    margin-top:10px;
+
+}
+
+.sizex {
+    font-size:1.3em;
+}
 
 /* Set the fixed height of the footer here */
 #push,

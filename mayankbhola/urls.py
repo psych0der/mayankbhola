@@ -24,6 +24,7 @@ urlpatterns = patterns('',
     url(r'^about/$', 'blogengine.views.aboutMe'),
     url(r'^projects/$', 'blogengine.views.projects'),
     url(r'^playground/$', 'blogengine.views.playground'),
+    url(r'^contact/$', 'blogengine.views.contact'),
 
     url(r'^blog/archive/(?P<year>\d{4})/(?P<month>\d+)/$',
         PostMonthArchiveView.as_view(month_format='%m'),
