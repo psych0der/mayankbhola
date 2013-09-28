@@ -14,7 +14,7 @@ def markdown_to_html( markdownText, images ):
     md = "%s\n%s" % ( markdownText, image_ref )
     html = markdown(md)
 
-    return html
+    return  "<div class=\"post-content\">"+html+"</div>"
 
 
 # Create your models here. 
@@ -67,7 +67,7 @@ class Post(models.Model):
         return "/blog/%s/%s/%s/" % (self.pub_date.year, self.pub_date.month, self.slug)
 
     def text_html( self ):
-        return markdown_to_html( self.text, self.images.all() )
+        return markdown_to_html(self.text, self.images.all() )
 
 
 class CategoryToPost(models.Model):

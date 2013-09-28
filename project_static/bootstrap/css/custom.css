@@ -252,7 +252,7 @@ src: url(../fonts/eurof35.ttf);
 
     font-family: hnew;
     color: #000;
-    font-size : 2.1em;
+    font-size : 2.0em;
     font-weight: bold;
 }
 
@@ -264,12 +264,18 @@ src: url(../fonts/eurof35.ttf);
 
 
 
-.post-content  , .post p{
+.post-content {
     margin-top: 5px;
     font-size: 14px;
     line-height: 27px;
     font-family:opens;
     
+}
+
+.post-content  h4 ,.post-content  h3 {
+    font-weight: normal;
+    color: #428bca;
+    margin-bottom:-1px;
 }
 
 .alist {

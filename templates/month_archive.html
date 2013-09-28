@@ -13,13 +13,11 @@
         <p class="post-title"><a href="{{ post.get_absolute_url }}">{{ post.title |capfirst}}</a></p>
         <small class="text-danger">{{ post.pub_date|date:'M d , Y' }}</small>
         
-        <p class="post-content">
-            {% autoescape off %}
-            
-                {{ post.text_html|truncatewords:30 }}
-            
-            {% endautoescape %}
-        </p>
+        {% autoescape off %}
+                
+                {{ post.text_html}}
+                 
+        {% endautoescape %}
   
         {% for cat in post.categories.all %}
             <span><a href="{{cat.get_absolute_url}}">#{{ cat }}</a></span>
