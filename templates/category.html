@@ -14,7 +14,7 @@
         
         {% autoescape off %}
                 
-                {{ post.text_html}}
+                {{ post.text_html|truncatewords:100}}...</div>
                  
         {% endautoescape %}
   

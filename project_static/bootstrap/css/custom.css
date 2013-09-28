@@ -180,7 +180,7 @@ src: url(../fonts/eurof35.ttf);
 
 }
 
-.highlight
+.highlight-link
 {   
     color:#999999;
     border-bottom: solid thin #5c8aca;
@@ -188,7 +188,7 @@ src: url(../fonts/eurof35.ttf);
     
 }
 
-.highlight a {
+.highlight-link a {
 
     color: #999999;
 }
