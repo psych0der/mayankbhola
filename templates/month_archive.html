@@ -8,6 +8,11 @@
         <div class="col-md-7">
         {% load pygmentify %}
         {% pygment %}
+        {% if object_list.count == 0 %}
+
+        <h4 class="text-center" style="font-size:6em;color:#ccc;font-family:arial;margin-top:80px;font-weight:bold;"> Sorry, No post found for {{month|date:"M ,Y"}}</h4>
+        {% endif %}
+        {% else %}
         {% for post in object_list %}
         <div class="post">
         <p class="post-title"><a href="{{ post.get_absolute_url }}">{{ post.title |capfirst}}</a></p>
@@ -25,7 +30,7 @@
             ,
             {% endif %}
         {% endfor %}
-        
+        {% endif %}
         </div>
         {% endfor %}
         <br />

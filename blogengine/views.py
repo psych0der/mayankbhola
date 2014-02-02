@@ -138,6 +138,7 @@ class PostMonthArchiveView(MonthArchiveView):
     make_object_list = True
     allow_future = True
     template_name = "month_archive.html"
+    allow_empty = True
     def get_context_data(self, *args, **kwargs):
         context = super(PostMonthArchiveView, self).get_context_data(*args, **kwargs)
         context['months'] = monthList()
